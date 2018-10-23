@@ -5,6 +5,8 @@ generators:
 - type: "no_params"
   assertions:
   - "@StatusCode == 200"
+  tags:
+  - " OWASP - OTG-CONFIG-006"
   severity: null
   database: null
   inactive: false
@@ -13,6 +15,7 @@ generators:
   assertions:
   - "@StatusCode == 200"
   - "@StatusCode != 404"
+  tags: null
   severity: null
   database: null
   inactive: false
@@ -29,6 +32,8 @@ generators:
 - type: "anonymous_invalid"
   assertions:
   - "@StatusCode == 401 OR @StatusCode == 403"
+  tags:
+  - "OWASP - OTG-AUTHN-002"
   severity: null
   database: null
   inactive: false
@@ -45,6 +50,14 @@ generators:
 - type: "auth_invalid"
   assertions:
   - "@StatusCode == 401 OR @StatusCode == 403"
+  tags:
+  - "OWASP A2"
+  - "OWASP A5"
+  - "OWASP A6"
+  - "OWASP A7"
+  - "[PIC DSS 3.0] 6.5.8"
+  - "[PIC DSS 3.0] 6.5.10"
+  - "OTG-AUTHN-004"
   severity: null
   database: null
   inactive: false
@@ -61,6 +74,8 @@ generators:
 - type: "rbac"
   assertions:
   - "@StatusCode == 403"
+  tags:
+  - "OWASP - OTG-IDENT-001 "
   severity: null
   database: null
   inactive: false
@@ -105,6 +120,8 @@ generators:
   assertions:
   - "@StatusCode != 401"
   - "@StatusCode != 404"
+  tags:
+  - "[PCI DSS 3.0] 6.5.2"
   severity: null
   database: null
   inactive: false
@@ -124,6 +141,11 @@ generators:
   - "@StatusCode != 401"
   - "@StatusCode != 404"
   - "@StatusCode != 500"
+  tags:
+  - "OWASP A3"
+  - "[PIC DSS 3.0] 6.5.7"
+  - "OWASP - OTG-INPVAL-001"
+  - "OWASP - OTG-INPVAL-002"
   severity: null
   database: null
   inactive: false
@@ -132,6 +154,10 @@ generators:
   assertions:
   - "@ResponseTime < 7000 OR @ResponseTime > 10000"
   - "@StatusCode != 404"
+  tags:
+  - "OWASP A1"
+  - "[PCI DSS 3.0] 6.5.1"
+  - "OWASP - OTG-INPVAL-005"
   severity: null
   database:
     name: "MySQL"
@@ -144,6 +170,8 @@ generators:
   - "@StatusCode != 401"
   - "@StatusCode != 404"
   - "@StatusCode != 500"
+  tags:
+  - "OWASP - Log Injection"
   severity: null
   database: null
   inactive: false
@@ -152,6 +180,8 @@ generators:
   assertions:
   - "@StatusCode != 401"
   - "@StatusCode != 404"
+  tags:
+  - "OWASP - OTG-BUSLOGIC-001"
   severity: null
   database: null
   inactive: false
@@ -162,6 +192,8 @@ generators:
   - "@StatusCode != 401"
   - "@StatusCode != 404"
   - "@StatusCode != 500"
+  tags:
+  - "OWASP - OTG-BUSLOGIC-001"
   severity: null
   database: null
   inactive: false
@@ -172,6 +204,8 @@ generators:
   - "@StatusCode != 401"
   - "@StatusCode != 404"
   - "@StatusCode != 500"
+  tags:
+  - "OWASP - OTG-BUSLOGIC-001"
   severity: null
   database: null
   inactive: false
@@ -182,6 +216,7 @@ generators:
   - "@StatusCode != 401"
   - "@StatusCode != 404"
   - "@StatusCode != 500"
+  tags: null
   severity: null
   database: null
   inactive: false
@@ -190,6 +225,8 @@ generators:
   assertions:
   - "@StatusCode != 401"
   - "@StatusCode != 404"
+  tags:
+  - "OWASP - OTG-BUSLOGIC-001"
   severity: null
   database: null
   inactive: false
@@ -200,6 +237,8 @@ generators:
   - "@StatusCode != 401"
   - "@StatusCode != 404"
   - "@StatusCode != 500"
+  tags:
+  - " OWASP - OTG-CONFIG-006"
   severity: null
   database: null
   inactive: false
